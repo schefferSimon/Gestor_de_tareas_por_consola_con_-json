@@ -33,4 +33,7 @@ class Tarea:
             "estado": self.__estado
             }
 
-            
+    def mostrar(self):
+        print(f"Estado: {self.getEstado()} | Nombre: {self.getNombre()}")
+        print(f"Fecha limite: {self.getFechaLimite()}")
+        print(f"Descripcion: {self.getDescripcion()}")
