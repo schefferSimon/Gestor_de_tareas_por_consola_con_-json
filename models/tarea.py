@@ -1,3 +1,6 @@
+import json
+import os
+
 class Tarea:
 
     def __init__(self, nombre, fechaLimite, descripcion, estado="pendiente"):
@@ -21,4 +24,13 @@ class Tarea:
     def marcarCompletada(self):
         self.__estado = "Completada"
 
-    
+    def toDict(self):
+        
+        return {
+            "nombre": self.__nombre,
+            "descripcion": self.__descripcion,
+            "fechaLimite": self.__fechaLimite,
+            "estado": self.__estado
+            }
+
+            
